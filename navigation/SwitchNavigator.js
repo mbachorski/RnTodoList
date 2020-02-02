@@ -1,8 +1,27 @@
 import React from 'react'
-import {createSwitchNavigator, createAppContainer} from 'react-navigation'
+import {createSwitchNavigator, createStackNavigator, createAppContainer} from 'react-navigation'
 import Login from '../screens/Login'
 import Signup from '../screens/Signup'
 import Dashboard from "../screens/Dashboard";
+import Settings from "../screens/Settings";
+import AddTodoItem from "../screens/AddTodoItem";
+
+const DashboardStack = createStackNavigator(
+    {
+        Dashboard: {
+            screen: Dashboard,
+        },
+        Settings: {
+            screen: Settings,
+        },
+        AddTodoItem: {
+            screen: AddTodoItem,
+        },
+    },
+    {
+        /* Same configuration as before */
+    }
+);
 
 const SwitchNavigator = createSwitchNavigator(
     {
@@ -13,7 +32,7 @@ const SwitchNavigator = createSwitchNavigator(
             screen: Signup
         },
         Dashboard: {
-            screen: Dashboard
+            screen: DashboardStack
         }
     },
     {

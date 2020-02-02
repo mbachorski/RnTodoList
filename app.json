@@ -1,7 +1,7 @@
 {
 	"expo": {
-		"name": "Expo Firebase Auth",
-		"slug": "expofirebaseauth",
+		"name": "RnTodoList",
+		"slug": "RnTodoList",
 		"privacy": "public",
 		"sdkVersion": "33.0.0",
 		"platforms": ["ios", "android", "web"],
